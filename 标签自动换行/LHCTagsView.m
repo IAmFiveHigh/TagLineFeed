@@ -57,6 +57,10 @@
         [self addSubview:button];
     }
     
+    CGRect frame = self.frame;
+    frame.size.height = row * 50 + 10 + 30;
+    self.frame = frame;
+    
 }
 
 /*
