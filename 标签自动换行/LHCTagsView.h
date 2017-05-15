@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol LHCTagViewDelegate <NSObject>
+
+- (void)tagBeClickWithTag:(NSInteger)tag;
+
+@end
+
 @interface LHCTagsView : UIView
+
+@property (nonatomic, weak) id<LHCTagViewDelegate> delegate;
 
 - (instancetype)initWithFrame:(CGRect)frame tags:(NSArray *)tags;
 
